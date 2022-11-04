@@ -1,5 +1,6 @@
 package com.cos.photogramstart.web;
 
+import com.cos.photogramstart.domain.user.User;
 import com.cos.photogramstart.web.dto.auth.SignupDto;
 import org.apache.logging.log4j.spi.LoggerContextFactory;
 import org.slf4j.Logger;
@@ -29,6 +30,10 @@ public class AuthController {
     public String signup(SignupDto signupDto){  // 회원가입을 진행할거  key= value (x-www-form-urlencoded)
 
         log.info(signupDto.toString());
+       // User Obejct <- signupDto의데이터를 넣어야하는데
+
+        User user = signupDto.toEntity();
+        log.info(user.toString());
 
         return "auth/signin"; // 회원가입 성공하면  -> 로그인페이지로
     }
