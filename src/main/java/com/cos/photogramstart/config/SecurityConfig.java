@@ -10,6 +10,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        http.csrf().disable(); // csrf 비활성화
+
         // super.configure(http);  // 기존시큐리티가 가지고있는 기능이 다 비활성화됨. (super 삭제시)
         http.authorizeRequests()
                 .antMatchers("/","/user/**","/image/**","/subscribe/**","/comment/**").authenticated() // 인증이필요한페이지는아무나못들어감
