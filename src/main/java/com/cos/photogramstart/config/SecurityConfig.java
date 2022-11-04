@@ -1,13 +1,25 @@
 package com.cos.photogramstart.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @EnableWebSecurity  // 해당 파일로 시큐리티를 활성화
 @Configuration // IOC
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+
+    @Bean
+    public BCryptPasswordEncoder encoder(){
+        return new BCryptPasswordEncoder();
+    }
+    /*  SecurityConfig가 ioc에 등록될떄 Bean을 읽어서 리턴해서  new BCryptPasswordEncoder()
+      ioc가 BCryptPasswordEncoder()를 들고있음  그럼 난 DI에 쓰기만하면됨
+     */
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable(); // csrf 비활성화

@@ -19,6 +19,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // 번호증가 전략이 데이트베이스를 따라간다.
     private int id;
 
+    @Column (unique = true)
     private String username;
     private String password;
 
