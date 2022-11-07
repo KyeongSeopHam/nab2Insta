@@ -19,13 +19,15 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // 번호증가 전략이 데이트베이스를 따라간다.
     private int id;
 
-    @Column (unique = true)
+    @Column (length = 20,unique = true)
     private String username;
+    @Column(nullable = false)
     private String password;
-
+    @Column(nullable = false)
     private String name;
     private String website; // 웹사이트
     private String bio;   // 자기소개
+    @Column(nullable = false)
     private String email;  // 이메일
     private String phone;  // 전화번호
     private String gender; // 성별
