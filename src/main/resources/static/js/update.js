@@ -14,7 +14,7 @@ function update(userId){
         dataType:"json"
 
     }).done(res=>{
-        console.log("update 성공")
+        console.log("update 성공1")
     }).fail(error=>{
         console.log("update 실패")
     });
