@@ -1,4 +1,4 @@
-package com.cos.photogramstart.web.dto;
+package com.cos.photogramstart.test;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,4 +9,5 @@ public class testControl {
     public String getT(){
         return "hello getT";
     }
+
 }
