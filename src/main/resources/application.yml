@@ -12,6 +12,7 @@ spring:
       prefix: /WEB-INF/views/
       suffix: .jsp
 
+
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
     url: jdbc:mariadb://database-1.cicayivi6g5n.ap-northeast-2.rds.amazonaws.com/photogram?serverTimezone=Asia/Seoul
