@@ -106,12 +106,6 @@
 			<scope>test</scope>
 		</dependency>
 
-//작업하면서 추가된 dependency
-		<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>
-		</dependency>
-	</dependencies>
 
 	<build>
 		<plugins>
