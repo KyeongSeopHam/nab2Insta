@@ -2,6 +2,9 @@
          pageEncoding="UTF-8"%>
 <html>
 <body>
-JSP JSP JSP 잘나오나요?
+<% String sta ="맑음"; %>
+
+JSP JSP JSP 잘나오나요? <br>
+오늘의 날씨는 <%=sta%>
 </body>
 </html>
