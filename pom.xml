@@ -14,7 +14,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>photogram-start</name>
 	<description>Demo project for Spring Boot</description>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<properties>
 	<java.version>11</java.version>
 	</properties>
@@ -120,14 +120,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 
-				<executions>
-					<execution>
-						<id>repackage</id>
-						<configuration>
-							<classifier>exec</classifier>
-						</configuration>
-					</execution>
-				</executions>
+
 
 				<configuration>
 					<excludes>
